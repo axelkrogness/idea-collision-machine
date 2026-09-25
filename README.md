@@ -200,3 +200,26 @@ Idea Collision Machine turns that principle into an interactive tool for brainst
 Source code is available on GitHub:
 
 https://github.com/axelkrogness1997-ui/idea-collision-machine
+
+
+## Deployment configuration (important)
+
+The frontend keeps collision generation in the browser. Authentication and saved
+challenges still require the separate FastAPI auth service.
+
+For the frontend Render Static Site, set this environment variable to the **public
+HTTPS base URL of your deployed FastAPI auth service** (no trailing slash):
+
+`VITE_AUTH_API_URL=https://YOUR-AUTH-SERVICE.onrender.com`
+
+If the auth API is deliberately served from the same origin as the frontend, this
+variable may be omitted. For local development, the app defaults to
+`http://127.0.0.1:8000`.
+
+For the FastAPI auth service, set:
+- `SECRET_KEY` to a long, random secret (do not commit it)
+- `CORS_ORIGINS` to the frontend origin, e.g. `https://idea-collision-machine-1.onrender.com`
+- Any database environment variables required by `auth/database.py`
+
+After changing frontend environment variables in Render, trigger a new frontend
+deploy because Vite embeds `VITE_` variables at build time.
