@@ -27,3 +27,4 @@ dist-ssr
 auth/.env
 auth/users.db
 auth/__pycache__/users.db
+__pycache__/
