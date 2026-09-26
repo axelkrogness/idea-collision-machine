@@ -16,7 +16,7 @@ from pydantic import BaseModel
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import Session
 
-from database import Base, engine, get_db
+from .database import Base, engine, get_db
 
 
 app = FastAPI(title="Idea Collision Machine Auth")
@@ -25,11 +25,10 @@ app = FastAPI(title="Idea Collision Machine Auth")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:5173",
-        "http://localhost:5174",
-        "http://127.0.0.1:5173",
-        "http://127.0.0.1:5174",
-        "https://idea-collision-machine-1.onrender.com",
+    "http://127.0.0.1:5173",
+    "http://127.0.0.1:5175",
+    "http://localhost:5173",
+    "http://localhost:5175",
     ],
     allow_credentials=True,
     allow_methods=["*"],
