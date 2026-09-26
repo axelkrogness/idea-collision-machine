@@ -26,4 +26,4 @@ dist-ssr
 # Local authentication files
 auth/.env
 auth/users.db
-auth/__pycache__/
+auth/__pycache__/users.db
