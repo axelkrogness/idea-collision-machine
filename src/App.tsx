@@ -8,7 +8,8 @@ type SavedChallenge = {
   category2: string
 }
 
-const AUTH_API_URL = 'http://127.0.0.1:8000'
+const AUTH_API_URL =
+  import.meta.env.VITE_AUTH_API_URL || 'http://127.0.0.1:8000'
 
 const categories1 = ['Healthcare', 'Gaming', 'Education', 'Finance']
 const categories2 = ['Agriculture', 'AI', 'Maps', 'Accessibility']
