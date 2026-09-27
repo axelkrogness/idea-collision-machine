@@ -29,7 +29,7 @@ app.add_middleware(
     "http://127.0.0.1:5175",
     "http://localhost:5173",
     "http://localhost:5175",
-    "https://idea-collision-machine.vercel.app/",
+    "https://idea-collision-machine.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
