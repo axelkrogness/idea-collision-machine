@@ -4,7 +4,7 @@ A creative idea generator that combines two unrelated worlds and turns the colli
 
 ## Live Demo
 
-**Idea Collision Machine** — https://idea-collision-machine-1.onrender.com/
+**Idea Collision Machine** — https://idea-collision-machine.vercel.app
 
 ## Overview
 
