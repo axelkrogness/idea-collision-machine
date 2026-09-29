@@ -671,6 +671,24 @@ function App() {
 
   return (
     <main className="app-shell">
+      <span
+        aria-label="Powered by Codyza"
+        style={{
+          position: 'fixed',
+          top: '20px',
+          left: '24px',
+          zIndex: 1000,
+          fontSize: 'clamp(0.9rem, 1.4vw, 1.2rem)',
+          fontWeight: 700,
+          letterSpacing: '0.02em',
+          color: '#ffffff',
+          textShadow: '0 2px 8px rgba(0, 0, 0, 0.65)',
+          pointerEvents: 'none',
+        }}
+      >
+        Powered by Codyza
+      </span>
+
       <video
         className="background-video"
         autoPlay
